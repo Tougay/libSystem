@@ -7,14 +7,14 @@
 
 		$sql = "UPDATE category SET name = '$name' WHERE id = '$id'";
 		if($conn->query($sql)){
-			$_SESSION['success'] = 'Category updated successfully';
+			$_SESSION['success'] = 'Catégorie mise à jour avec succès';
 		}
 		else{
 			$_SESSION['error'] = $conn->error;
 		}
 	}
 	else{
-		$_SESSION['error'] = 'Fill up edit form first';
+		$_SESSION['error'] = "Remplissez d'abord le formulaire de modification";
 	}
 
 	header('location:category.php');

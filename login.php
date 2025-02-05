@@ -11,13 +11,13 @@
 			header('location: transaction.php');
 		}
 		else{
-			$_SESSION['error'] = 'Student not found';
+			$_SESSION['error'] = 'Étudiant introuvable';
 			header('location: index.php');
 		}
 
 	}
 	else{
-		$_SESSION['error'] = 'Enter student id first';
+		$_SESSION['error'] = "Entrez d'abord votre Id d'étudiant";
 		header('location: index.php');
 	}
 

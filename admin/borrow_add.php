@@ -10,7 +10,7 @@
 			if(!isset($_SESSION['error'])){
 				$_SESSION['error'] = array();
 			}
-			$_SESSION['error'][] = 'Student not found';
+			$_SESSION['error'][] = 'Étudiant introuvable';
 		}
 		else{
 			$row = $query->fetch_assoc();
@@ -43,7 +43,7 @@
 						if(!isset($_SESSION['error'])){
 							$_SESSION['error'] = array();
 						}
-						$_SESSION['error'][] = 'Book with ISBN - '.$isbn.' unavailable';
+						$_SESSION['error'][] = 'Réservez avec ISBN - '.$isbn.' indisponible';
 					}
 		
 				}
@@ -51,13 +51,13 @@
 
 			if($added > 0){
 				$book = ($added == 1) ? 'Book' : 'Books';
-				$_SESSION['success'] = $added.' '.$book.' successfully borrowed';
+				$_SESSION['success'] = $added.' '.$book.' emprunté avec succès';
 			}
 
 		}
 	}	
 	else{
-		$_SESSION['error'] = 'Fill up add form first';
+		$_SESSION['error'] = "Remplissez d'abord le formulaire d'ajout";
 	}
 
 	header('location: borrow.php');

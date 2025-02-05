@@ -11,12 +11,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Return Books
+      Retourner les livres
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li>Transaction</li>
-        <li class="active">Return</li>
+        <li class="active">Retour</li>
       </ol>
     </section>
     <!-- Main content -->
@@ -26,7 +26,7 @@
           ?>
             <div class="alert alert-danger alert-dismissible">
               <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-              <h4><i class="icon fa fa-warning"></i> Error!</h4>
+              <h4><i class="icon fa fa-warning"></i> Erreur!</h4>
                 <ul>
                 <?php
                   foreach($_SESSION['error'] as $error){
@@ -56,17 +56,17 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header with-border">
-              <a href="#addnew" data-toggle="modal" class="btn btn-primary btn-sm btn-flat"><i class="fa fa-plus"></i> Returns</a>
+              <a href="#addnew" data-toggle="modal" class="btn btn-primary btn-sm btn-flat"><i class="fa fa-plus"></i> Retours</a>
             </div>
             <div class="box-body">
               <table id="example1" class="table table-bordered">
                 <thead>
                   <th class="hidden"></th>
                   <th>Date</th>
-                  <th>Student ID</th>
-                  <th>Name</th>
+                  <th>Etudiant ID</th>
+                  <th>Nom</th>
                   <th>ISBN</th>
-                  <th>Title</th>
+                  <th>Titre</th>
                 </thead>
                 <tbody>
                   <?php

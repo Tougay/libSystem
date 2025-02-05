@@ -31,8 +31,8 @@
 	        				<h3 class="box-title">TRANSACTIONS</h3>
 	        				<div class="pull-right">
 	        					<select class="form-control input-sm" id="transelect">
-	        						<option value="borrow" <?php echo ($action == '') ? 'selected' : ''; ?>>Borrow</option>
-	        						<option value="return" <?php echo ($action == 'return') ? 'selected' : ''; ?>>Return</option>
+	        						<option value="borrow" <?php echo ($action == '') ? 'selected' : ''; ?>>Emprunter</option>
+	        						<option value="return" <?php echo ($action == 'return') ? 'selected' : ''; ?>>Retour</option>
 	        					</select>
 	        				</div>
 	        			</div>
@@ -42,8 +42,8 @@
 			        				<th class="hidden"></th>
 			        				<th>Date</th>
 			        				<th>ISBN</th>
-			        				<th>Title</th>
-			        				<th>Author</th>
+			        				<th>Titre</th>
+			        				<th>Autheur</th>
 			        			</thead>
 			        			<tbody>
 			        			<?php

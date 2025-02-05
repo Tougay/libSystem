@@ -33,7 +33,7 @@
 
 			$sql = "UPDATE admin SET username = '$username', password = '$password', firstname = '$firstname', lastname = '$lastname', photo = '$filename' WHERE id = '".$user['id']."'";
 			if($conn->query($sql)){
-				$_SESSION['success'] = 'Admin profile updated successfully';
+				$_SESSION['success'] = "Profil d'administrateur mis à jour avec succès";
 			}
 			else{
 				if($return == 'borrow.php' OR $return == 'return.php'){
@@ -54,10 +54,10 @@
 				if(!isset($_SESSION['error'])){
 					$_SESSION['error'] = array();
 				}
-				$_SESSION['error'][] = 'Incorrect password';
+				$_SESSION['error'][] = 'Mot de passe incorrect';
 			}
 			else{
-				$_SESSION['error'] = 'Incorrect password';
+				$_SESSION['error'] = 'Mot de passe incorrect';
 			}
 
 		}
@@ -67,10 +67,10 @@
 			if(!isset($_SESSION['error'])){
 				$_SESSION['error'] = array();
 			}
-			$_SESSION['error'][] = 'Fill up required details first';
+			$_SESSION['error'][] = "Remplissez d'abord les détails requis";
 		}
 		else{
-			$_SESSION['error'] = 'Fill up required details first';
+			$_SESSION['error'] = "Remplissez d'abord les détails requis";
 		}
 		
 	}

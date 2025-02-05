@@ -6,14 +6,14 @@
 		
 		$sql = "INSERT INTO category (name) VALUES ('$name')";
 		if($conn->query($sql)){
-			$_SESSION['success'] = 'Category added successfully';
+			$_SESSION['success'] = 'Catégorie ajoutée avec succès';
 		}
 		else{
 			$_SESSION['error'] = $conn->error;
 		}
 	}	
 	else{
-		$_SESSION['error'] = 'Fill up add form first';
+		$_SESSION['error'] = "Remplissez d'abord le formulaire d'ajout";
 	}
 
 	header('location: category.php');

@@ -10,7 +10,7 @@
 			if(!isset($_SESSION['error'])){
 				$_SESSION['error'] = array();
 			}
-			$_SESSION['error'][] = 'Student not found';
+			$_SESSION['error'][] = 'Étudiant introuvable';
 		}
 		else{
 			$row = $query->fetch_assoc();
@@ -49,7 +49,7 @@
 							if(!isset($_SESSION['error'])){
 								$_SESSION['error'] = array();
 							}
-							$_SESSION['error'][] = 'Borrow details not found: ISBN - '.$isbn.', Student ID: '.$student;
+							$_SESSION['error'][] = "Détails de l'emprunt introuvables : ISBN - ".$isbn.', Etudiant ID: '.$student;
 						}
 
 						
@@ -59,7 +59,7 @@
 						if(!isset($_SESSION['error'])){
 							$_SESSION['error'] = array();
 						}
-						$_SESSION['error'][] = 'Book not found: ISBN - '.$isbn;
+						$_SESSION['error'][] = 'Livre introuvable : ISBN - '.$isbn;
 					}
 		
 				}
@@ -67,13 +67,13 @@
 
 			if($return > 0){
 				$book = ($return == 1) ? 'Book' : 'Books';
-				$_SESSION['success'] = $return.' '.$book.' successfully returned';
+				$_SESSION['success'] = $return.' '.$book.' retourné avec succès';
 			}
 
 		}
 	}	
 	else{
-		$_SESSION['error'] = 'Fill up add form first';
+		$_SESSION['error'] = "Remplissez d'abord le formulaire d'ajout";
 	}
 
 	header('location: return.php');

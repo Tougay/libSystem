@@ -32,7 +32,7 @@
 	        		<div class="box">
 	        			<div class="box-header with-border">
 	        				<div class="input-group">
-				                <input type="text" class="form-control input-lg" id="searchBox" placeholder="Search for ISBN, Title or Author">
+				                <input type="text" class="form-control input-lg" id="searchBox" placeholder="Rechercher par ISBN, Titre ou Autheur">
 				                <span class="input-group-btn">
 				                    <button type="button" class="btn btn-primary btn-flat btn-lg"><i class="fa fa-search"></i> </button>
 				                </span>
@@ -40,9 +40,9 @@
 	        			</div>
 	        			<div class="box-body">
 	        				<div class="input-group col-sm-5">
-				                <span class="input-group-addon">Category:</span>
+				                <span class="input-group-addon">Categorie:</span>
 				                <select class="form-control" id="catlist">
-				                	<option value=0>ALL</option>
+				                	<option value=0>TOUT</option>
 				                	<?php
 				                		$sql = "SELECT * FROM category";
 				                		$query = $conn->query($sql);
@@ -58,16 +58,16 @@
 	        				<table class="table table-bordered table-striped" id="booklist">
 			        			<thead>
 			        				<th>ISBN</th>
-			        				<th>Title</th>
-			        				<th>Author</th>
-			        				<th>Status</th>
+			        				<th>Titre</th>
+			        				<th>Autheur</th>
+			        				<th>Statut</th>
 			        			</thead>
 			        			<tbody>
 			        			<?php
 			        				$sql = "SELECT * FROM books $where";
 			        				$query = $conn->query($sql);
 			        				while($row = $query->fetch_assoc()){
-			        					$status = ($row['status'] == 0) ? '<span class="label label-success">available</span>' : '<span class="label label-danger">not available</span>';
+			        					$status = ($row['status'] == 0) ? '<span class="label label-success">disponible</span>' : '<span class="label label-danger">pas disponible</span>';
 			        					echo "
 			        						<tr>
 			        							

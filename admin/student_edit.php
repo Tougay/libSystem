@@ -9,14 +9,14 @@
 
 		$sql = "UPDATE students SET firstname = '$firstname', lastname = '$lastname', course_id = '$course' WHERE id = '$id'";
 		if($conn->query($sql)){
-			$_SESSION['success'] = 'Student updated successfully';
+			$_SESSION['success'] = 'Étudiant mis à jour avec succès';
 		}
 		else{
 			$_SESSION['error'] = $conn->error;
 		}
 	}
 	else{
-		$_SESSION['error'] = 'Fill up edit form first';
+		$_SESSION['error'] = "Remplissez d'abord le formulaire de modification";
 	}
 
 	header('location:student.php');

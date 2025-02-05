@@ -16,16 +16,16 @@
 
     	<form action="login.php" method="POST">
       		<div class="form-group has-feedback">
-        		<input type="text" class="form-control" name="username" placeholder="input Username" required autofocus>
+        		<input type="text" class="form-control" name="username" placeholder="saisir le nom d'utilisateur" required autofocus>
         		<span class="glyphicon glyphicon-user form-control-feedback"></span>
       		</div>
           <div class="form-group has-feedback">
-            <input type="password" class="form-control" name="password" placeholder="input Password" required>
+            <input type="password" class="form-control" name="password" placeholder="saisir le mot de passe" required>
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
           </div>
       		<div class="row">
     			<div class="col-xs-4">
-          			<button type="submit" class="btn btn-primary btn-block btn-flat" name="login"><i class="fa fa-sign-in"></i> Sign In</button>
+          			<button type="submit" class="btn btn-primary btn-block btn-flat" name="login"><i class="fa fa-sign-in"></i> Se connecter</button>
         		</div>
       		</div>
     	</form>

@@ -7,14 +7,14 @@
 		
 		$sql = "INSERT INTO course (code, title) VALUES ('$code', '$title')";
 		if($conn->query($sql)){
-			$_SESSION['success'] = 'Course added successfully';
+			$_SESSION['success'] = 'Cours ajouté avec succès';
 		}
 		else{
 			$_SESSION['error'] = $conn->error;
 		}
 	}	
 	else{
-		$_SESSION['error'] = 'Fill up add form first';
+		$_SESSION['error'] = "Remplissez d'abord le formulaire d'ajout";
 	}
 
 	header('location: course.php');
