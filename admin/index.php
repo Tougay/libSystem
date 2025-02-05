@@ -24,7 +24,7 @@
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
           </div>
       		<div class="row">
-    			<div class="col-xs-4">
+    			<div class="col-xs-5">
           			<button type="submit" class="btn btn-primary btn-block btn-flat" name="login"><i class="fa fa-sign-in"></i> Se connecter</button>
         		</div>
       		</div>

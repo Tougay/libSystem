@@ -62,7 +62,7 @@
                   <div class="form-group">
                     <label>Category: </label>
                     <select class="form-control input-sm" id="select_category">
-                      <option value="0">ALL</option>
+                      <option value="0">Tous</option>
                       <?php
                         $sql = "SELECT * FROM category";
                         $query = $conn->query($sql);
